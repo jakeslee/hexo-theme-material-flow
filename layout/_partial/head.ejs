@@ -17,9 +17,15 @@
     else if (is_tag())
       title = 'Tag: ' + page.tag;
   %>
-  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+  <title><% if (title) { %><%= title %> | <% } %><%= config.title %><% if (config.subtitle) {%> - <%= config.subtitle%><% }%></title>
   <meta name="description" content="<%= config.description %>" />
-  <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
+
+    <% if (page.keywords){ %>
+  <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+    <% } else if (config.keywords){ %>
+  <meta name="keywords" content="<%= config.keywords %>">
+    <%} %>
+
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <%- favicon_tag(config.favicon) %>
@@ -30,7 +36,7 @@
     google_plus: theme.google_plus, 
     fb_admins: theme.fb_admins, 
     fb_app_id: theme.fb_app_id}) %>
-    
+  <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>

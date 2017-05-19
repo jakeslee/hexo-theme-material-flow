@@ -2,8 +2,14 @@
 <% if(config.avatar) { %>
 <img class='avatar waves-image' src='<%= url_for(config.avatar) %>' />
 <%} %>
-<div class='header'><%=config.author %></div>
+<div class='header hide-before'><%=config.author %></div>
 <div class='content'>
-<div class='desc'>Tempora mutantur, nos et mutamur in illis ...</div>
+<div class='desc'>
+    Software Engineer & Designer
+    <div class="location">
+        <i class="fa fa-map-marker"></i>
+        Shenzhen, China
+    </div>
+</div>
 </div>
 </section>

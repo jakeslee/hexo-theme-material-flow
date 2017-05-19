@@ -12,6 +12,11 @@
             margin-right: 10px;
             color: @secondary-color;
         }
+
+        &.hide-before:before {
+            content: '';
+        }
+
         font-size: 1.2rem;
         line-height: 2rem;
         padding: 8px @gap;
@@ -43,6 +48,11 @@
     }
 }
 .m_widget.about{
+
+    .header {
+        text-align: center;
+    }
+
     .waves-effect,img{
         width: 100%;
         display: block;
@@ -58,8 +68,17 @@
             background:@qoute-background-color;
             .enable-trans(.15s);
             line-height: 1.2em;
-            font-style: italic;
-            &:before{
+            //font-style: italic;
+
+            text-align: center;
+            font-size: 14px;
+
+            .location {
+                color: #9a9ea3;
+                margin-top: 5px;
+            }
+
+            /*&:before{
                 content:'';
                 position: absolute;
                 left:0;
@@ -67,7 +86,7 @@
                 width:2px;
                 height:100%;
                 background:@secondary-color;
-            }
+            }*/
             &:empty{
                 padding:0;
                 height: 0;
