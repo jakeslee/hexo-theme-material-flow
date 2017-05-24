@@ -18,7 +18,12 @@
       title = 'Tag: ' + page.tag;
   %>
   <title><% if (title) { %><%= title %> | <% } %><%= config.title %><% if (config.subtitle) {%> - <%= config.subtitle%><% }%></title>
-  <meta name="description" content="<%= config.description %>" />
+
+  <% if (page.description) {%>
+    <meta name="description" content="<%= page.description %>" />
+  <% } else {%>
+    <meta name="description" content="<%= config.description %>" />
+  <%} %>
 
     <% if (page.keywords){ %>
   <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
