@@ -168,11 +168,16 @@
             }
         }
     }
-    table:not('.highlight table') {
-        width: 100%;
+    .highlight table {
+        min-width: 0;
+        border-collapse: inherit;
+    }
+    table {
+        //width: 100%;
+        min-width: 50%;
         td,
         th {
-            padding: 12px 24px
+            padding: 5px 10px
         }
         tr {
             border-bottom: 1px solid #ddd;
