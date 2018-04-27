@@ -126,7 +126,7 @@ var customSearch;
 	function setScrollReveal() {
 		const $reveal = $('.reveal');
 		if ($reveal.length === 0) return;
-		const sr = ScrollReveal({ distance: 0 });
+		const sr = ScrollReveal({ distance: 0, scale: 0.9 });
 		sr.reveal('.reveal');
 	}
 	function setTocToggle() {
