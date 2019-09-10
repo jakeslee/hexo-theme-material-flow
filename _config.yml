@@ -26,6 +26,12 @@ menu:
   - name: Home
     slug: home
     url: /
+  - name: Code
+    slug: gitlab
+    url: https://git.imoe.tech
+  - name: Drive
+    slug: drive
+    url: https://drive.imoe.tech
   - name: Archives
     slug: archives
     url: /archives
