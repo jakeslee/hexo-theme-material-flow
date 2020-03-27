@@ -13,6 +13,12 @@
 		<%- partial('categories',{post:post}) %>
   </section>
   <section class="article typo">
+      <% if (post.headImage) { %>
+      <p>
+          <img src="<%- url_for(post.headImage) %>" alt=""/>
+      </p>
+      <% } %>
+
 	  <%- post.excerpt || post.content %>
 
     <% if (post.excerpt) { %>
