@@ -205,7 +205,7 @@ var customSearch;
 		setHeaderMenuPhone();
 		setHeaderSearch();
 		setWaves();
-		setScrollReveal();
+		// setScrollReveal();
 		setTocToggle();
 		// getHitokoto();
 		// getPicture();
