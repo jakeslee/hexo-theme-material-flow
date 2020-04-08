@@ -31,7 +31,7 @@ var customSearch;
 			}
 		});
 		// bind events to every btn
-		const $commentTarget = $('#comments');
+		const $commentTarget = $('#comment');
 		if ($commentTarget.length) {
 			$comment.click(e => { e.preventDefault(); e.stopPropagation(); scrolltoElement($commentTarget); });
 		} else $comment.remove();
